@@ -67,9 +67,11 @@ Optionally, you can replace level shifter module with following SMD components. 
 
 | Quantity | PCB Positions   | Name                               |
 |----------|-----------------|------------------------------------|
-| 10       | R5-12, R14, R15 | 10kΩ resistor, 0805 SMD	          |
-| 1        | R13             | 1kΩ resistor, 0805 SMD             |
-| 5        | Q1-Q5           | BSS138 FET SOT-23	              |
+| 8        | R5 - R12        | 10kΩ resistor, 0805 SMD	          |
+| 4        | Q1              | BSS138 FET SOT-23	              |
+
+In the bottom side of the PCB, there is section labelled "SRQ" or "SRQ reserved". This adds optional 5th level converter channel, which is
+not needed. Feel free to ignore them.
 
 ### Solder!
 
