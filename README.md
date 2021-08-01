@@ -38,19 +38,46 @@ In addition to the rest of the materials, you will need:
 
 ### Building PI1541 Hat
 
-Obtain necessary materials and build a PI1541 Hat:
+Obtain required materials:
 
-- Order PCB: [Pi1541 IO Adapter Rev. 4](https://www.pcbway.com/project/shareproject/Pi1541_IO_Adapter__Rev_4.html)
-- Gather required components
-  - Most components documented at: https://www.hackup.net/2018/07/pi1541io-revision-4/
-  - Exceptions:
-    - SSD1306 OLED 128x32 instead of SSD1306 OLED 128x64
-    - Straight push buttons instead of right-angle push buttons
+- Order PCB ([Pi1541 IO Adapter Rev. 5](https://www.pcbway.com/project/shareproject/Pi1541_IO_Adapter__Rev_5.html))
+- Gather components (see table below, [modified from hackup.net listing](https://www.hackup.net/2018/07/pi1541io-revision-4/))
 
-Solder components and necessary headers:
+Required components for full build:
 
-- Build the hat according to Option B setup
-- For pinout compatibility, solder LED screen to use **bus 1**
+| Quantity | PCB Positions | Name                               |
+|----------|---------------|------------------------------------|
+| 1        | P1            | 1x4 pin female header              |
+| 1-2      | J1, J2        | 6 pin DIN socket                   |
+| 1        |               | SSD1306 OLED 128x32                |
+| 6-7      | SW6           | tactile push buttons               |
+| 1        | U1 (LevelShifter) | 4-channel level shifter module	|
+| 1        | U2            | 7406 IC chip                       |
+| 1        | C1            | 100nf ceramic capacitor	        |
+| 1        | D1            | 3mm LED (green)                    |
+| 1        | D2            | 3mm LED (red)                      |
+| 2        | R1, R2        | 220Ω resistor                      |
+| 2        | R3, R4        | 1kΩ resistor                       |
+| 1        |               | piezo speaker                      |
+| 4        |               | M2.5 screws, 18mm	                |
+| 4        |               | M2.5 nuts	                        |
+| 4        |               | distance rolls, 11mm	            |
+
+Optionally, you can replace level shifter module with following SMD components. If you don't have previous experience of working with SMD components, I recommend using a pre-built level shifter.
+
+| Quantity | PCB Positions   | Name                               |
+|----------|-----------------|------------------------------------|
+| 10       | R5-12, R14, R15 | 10kΩ resistor, 0805 SMD	          |
+| 1        | R13             | 1kΩ resistor, 0805 SMD             |
+| 5        | Q1-Q5           | BSS138 FET SOT-23	              |
+
+### Solder!
+
+Build the hat according to Option B setup (solder the upper points as depicted in cyan below)
+
+![](./images/option-a-b.jpg)
+
+For pinout compatibility, solder LED screen to use **bus 1**
 
 ### Software Setup: Pi1541
 
